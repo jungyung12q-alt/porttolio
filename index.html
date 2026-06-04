@@ -93,6 +93,8 @@
   .pcard .pr .link-label svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .pcard .pr .badge{font-size:12px;color:var(--faint);background:var(--bg);border:1px solid var(--line);padding:4px 10px;border-radius:100px}
   .no-link .pr .link-label{color:var(--faint)}
+  .video-wrap{position:relative;width:100%;padding-bottom:56.25%;margin:16px 0;border-radius:8px;overflow:hidden;background:#000}
+  .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
   /* SKILLS */
   .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
@@ -206,19 +208,18 @@
           <span class="badge">Vercel 배포</span>
         </div>
       </a>
-      <a href="https://jungyung12q-alt.github.io/porttolio/" target="_blank" rel="noopener" class="pcard">
+      <div class="pcard">
         <div class="pno">03</div>
-        <div class="pcat">AI 정보 · 커뮤니티</div>
-        <h4>AI 정보 영상<br>커뮤니티</h4>
-        <p>AI 관련 영상과 정보를 큐레이션하는 커뮤니티 플랫폼. AI 트렌드를 쉽게 접할 수 있도록 콘텐츠를 정리하고 공유하는 공간입니다.</p>
-        <div class="pr">
-          <span class="link-label">
-            바로가기
-            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </span>
-          <span class="badge">GitHub Pages</span>
+        <div class="pcat">AI 활용 · 영상</div>
+        <h4>AI 정보 영상</h4>
+        <div class="video-wrap">
+          <iframe src="https://drive.google.com/file/d/1IYShOQXuonB7gMuofGN57iNjZVzflIzU/preview" allowfullscreen allow="autoplay"></iframe>
         </div>
-      </a>
+        <div class="pr">
+          <span class="link-label">영상 자료</span>
+          <span class="badge">Google Drive</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
