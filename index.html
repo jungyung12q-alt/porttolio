@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이준경 · 포트폴리오 — 웜 매거진</title>
+<title>이준경 · AI 활용 포트폴리오</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
   ::selection{background:var(--accent);color:#faf4e9}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1200px;margin:0 auto;padding:0 52px}
@@ -38,7 +38,7 @@
   .navlinks{display:flex;gap:36px;align-items:center}
   .navlinks a{font-size:14px;color:var(--muted);transition:color .2s;white-space:nowrap}
   .navlinks a:hover{color:var(--accent)}
-  .nav-cta{font-size:13.5px;background:var(--ink);color:var(--paper)!important;padding:10px 20px;border-radius:100px;transition:background .2s;white-space:nowrap}
+  .nav-cta{font-size:13.5px;background:var(--ink);color:var(--paper)!important;padding:10px 20px;border-radius:100px;transition:background .2s}
   .nav-cta:hover{background:var(--accent)}
 
   /* MASTHEAD */
@@ -49,16 +49,16 @@
   h1.hero{font-family:var(--display);font-weight:300;font-size:clamp(50px,8vw,104px);line-height:1.02;letter-spacing:-.02em}
   h1.hero b{font-weight:500}
   h1.hero i{font-style:italic;color:var(--accent);font-weight:400}
-  .hero-side{max-width:300px;text-align:left}
+  .hero-side{max-width:300px}
   .hero-side p{font-size:16px;color:var(--muted);line-height:1.6}
   .hero-side p b{color:var(--ink);font-weight:600}
   .hero-side .acts{display:flex;flex-direction:column;gap:10px;margin-top:26px}
-  .btn-primary{background:var(--accent);color:var(--paper);text-align:center;padding:14px 24px;border-radius:100px;font-size:15px;font-weight:500;transition:background .2s,transform .2s;white-space:nowrap}
+  .btn-primary{background:var(--accent);color:var(--paper);text-align:center;padding:14px 24px;border-radius:100px;font-size:15px;font-weight:500;transition:background .2s,transform .2s}
   .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
-  .btn-ghost{text-align:center;border:1px solid var(--line-2);padding:14px 24px;border-radius:100px;font-size:15px;color:var(--ink);transition:border-color .2s,color .2s}
+  .btn-ghost{text-align:center;border:1px solid var(--line-2);padding:14px 24px;border-radius:100px;font-size:15px;color:var(--ink);transition:border-color .2s}
   .btn-ghost:hover{border-color:var(--ink)}
 
-  /* TICKER METRICS */
+  /* TICKER */
   .ticker{border-bottom:1px solid var(--line);background:var(--paper)}
   .ticker .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-top:30px;padding-bottom:30px}
   .tk{display:flex;align-items:baseline;gap:12px;white-space:nowrap}
@@ -72,40 +72,31 @@
   .sec-title{font-family:var(--display);font-size:32px;font-weight:500;letter-spacing:-.01em}
   .sec-meta{justify-self:end;align-self:center;font-family:var(--serif);font-size:13px;color:var(--faint);letter-spacing:.06em}
 
-  /* ABOUT — magazine columns */
+  /* ABOUT */
   .about{display:grid;grid-template-columns:1.1fr 1.4fr;gap:60px;align-items:start}
   .about .pull{font-family:var(--display);font-weight:300;font-size:30px;line-height:1.35;letter-spacing:-.01em}
   .about .pull i{font-style:italic;color:var(--accent)}
-  .about .body{column-count:2;column-gap:34px}
-  .about .body p{font-size:15.5px;color:#473e34;margin-bottom:16px;break-inside:avoid}
+  .about .body p{font-size:15.5px;color:#473e34;margin-bottom:16px}
   .about .body p:first-child::first-letter{font-family:var(--display);font-size:58px;font-weight:500;float:left;line-height:.8;padding:6px 10px 0 0;color:var(--accent)}
 
-  /* PROJECTS — editorial list w/ featured */
-  .feature{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:46px;margin-bottom:18px}
-  .feature .fno{font-family:var(--display);font-style:italic;font-size:18px;color:var(--accent);margin-bottom:14px}
-  .feature .fcat{font-family:var(--serif);font-size:13px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
-  .feature h3{font-family:var(--display);font-size:34px;font-weight:500;letter-spacing:-.015em;line-height:1.12;margin-bottom:16px}
-  .feature p{font-size:16px;color:var(--muted);margin-bottom:24px}
-  .feature .ftags{display:flex;flex-wrap:wrap;gap:8px}
-  .feature .ftags span{font-size:12.5px;color:#5b5142;border:1px solid var(--line-2);padding:5px 13px;border-radius:100px}
-  .feature .fbig{text-align:center;border-left:1px solid var(--line);padding-left:50px}
-  .feature .fbig .v{font-family:var(--display);font-size:72px;font-weight:500;color:var(--accent);letter-spacing:-.03em;line-height:1}
-  .feature .fbig .c{font-size:14px;color:var(--muted);margin-top:12px}
-
-  .plist{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-  .pcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px;transition:transform .25s,box-shadow .25s}
+  /* PROJECTS */
+  .plist{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
   .pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(80,55,30,.4)}
+  .pcard-link{display:flex;flex-direction:column;height:100%}
   .pcard .pno{font-family:var(--display);font-style:italic;font-size:16px;color:var(--accent);margin-bottom:14px}
   .pcard .pcat{font-family:var(--serif);font-size:12px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
   .pcard h4{font-family:var(--display);font-size:21px;font-weight:500;margin-bottom:12px;line-height:1.2}
-  .pcard p{font-size:14.5px;color:var(--muted);margin-bottom:22px;min-height:64px}
-  .pcard .pr{display:flex;align-items:baseline;gap:10px;border-top:1px solid var(--line);padding-top:18px}
-  .pcard .pr .v{font-family:var(--display);font-size:30px;font-weight:500;color:var(--accent)}
-  .pcard .pr .c{font-size:12.5px;color:var(--muted)}
+  .pcard p{font-size:14.5px;color:var(--muted);flex:1;margin-bottom:22px}
+  .pcard .pr{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;margin-top:auto}
+  .pcard .pr .link-label{font-size:13px;color:var(--accent);display:flex;align-items:center;gap:6px}
+  .pcard .pr .link-label svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .pcard .pr .badge{font-size:12px;color:var(--faint);background:var(--bg);border:1px solid var(--line);padding:4px 10px;border-radius:100px}
+  .no-link .pr .link-label{color:var(--faint)}
 
   /* SKILLS */
   .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
-  .srow{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);align-items:baseline}
+  .srow{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line);align-items:baseline}
   .srow h4{font-family:var(--display);font-size:19px;font-weight:500}
   .srow .chips{display:flex;flex-wrap:wrap;gap:8px}
   .srow .chips span{font-size:13px;color:#5b5142;background:var(--paper);border:1px solid var(--line);padding:6px 13px;border-radius:7px}
@@ -126,9 +117,7 @@
   @media(max-width:980px){
     .wrap{padding:0 24px}
     .navlinks{display:none}
-    .hero-grid,.about,.feature{grid-template-columns:1fr;gap:32px}
-    .about .body{column-count:1}
-    .feature .fbig{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:28px;text-align:left}
+    .hero-grid,.about{grid-template-columns:1fr;gap:32px}
     .plist{grid-template-columns:1fr}
     .skills{grid-template-columns:1fr}
     .srow{grid-template-columns:1fr;gap:12px}
@@ -141,26 +130,26 @@
     <div class="brand">이준경 <i>Lee Junkyung</i></div>
     <div class="navlinks">
       <a href="#about">소개</a>
-      <a href="#work">주요 작업</a>
+      <a href="#work">프로젝트</a>
       <a href="#skills">스킬</a>
-      <a href="#contact" class="nav-cta">프로젝트 문의</a>
+      <a href="#contact" class="nav-cta">연락하기</a>
     </div>
   </div>
 </nav>
 
 <header>
   <div class="wrap">
-    <div class="masthead-top"><span>PORTFOLIO · 2025</span><span>PERFORMANCE & BRAND MARKETING</span><span>NO. 01</span></div>
+    <div class="masthead-top"><span>PORTFOLIO · 2025</span><span>AI 활용 · 데이터 · 자동화</span><span>NO. 01</span></div>
     <div class="hero-grid">
       <div>
-        <div class="hero-kicker">Freelance Marketer</div>
-        <h1 class="hero">데이터는 <i>증거</i>,<br><b>브랜드는 약속.</b></h1>
+        <div class="hero-kicker">AI Utilization Specialist</div>
+        <h1 class="hero">AI로 <i>일하는</i><br><b>방식을 바꾼다.</b></h1>
       </div>
       <div class="hero-side">
-        <p>D2C·스타트업·B2B SaaS의 성장을 <b>8년</b> 동안 설계해 온 퍼포먼스 마케터입니다. 광고 효율과 브랜드 메시지를 같은 무게로 다룹니다.</p>
+        <p>AI 도구와 데이터를 활용해 <b>실용적인 솔루션</b>을 만드는 이준경입니다. 공공데이터부터 업무 자동화까지, 아이디어를 동작하는 결과물로 만듭니다.</p>
         <div class="acts">
-          <a href="#work" class="btn-primary">작업 보기</a>
-          <a href="#contact" class="btn-ghost">협업 제안하기</a>
+          <a href="#work" class="btn-primary">프로젝트 보기</a>
+          <a href="#contact" class="btn-ghost">연락하기</a>
         </div>
       </div>
     </div>
@@ -169,10 +158,10 @@
 
 <div class="ticker">
   <div class="wrap">
-    <div class="tk"><span class="n">48억+</span><span class="l">누적 집행 광고비</span></div>
-    <div class="tk"><span class="n">312%</span><span class="l">평균 ROAS</span></div>
-    <div class="tk"><span class="n">40+</span><span class="l">함께한 브랜드</span></div>
-    <div class="tk"><span class="n">8년</span><span class="l">실무 경력</span></div>
+    <div class="tk"><span class="n">AI</span><span class="l">업무 자동화 설계</span></div>
+    <div class="tk"><span class="n">Data</span><span class="l">기반 의사결정 지원</span></div>
+    <div class="tk"><span class="n">VOC</span><span class="l">분석 · 인사이트 도출</span></div>
+    <div class="tk"><span class="n">Open</span><span class="l">API 활용 대시보드</span></div>
   </div>
 </div>
 
@@ -180,11 +169,11 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-no">01</span><h2 class="sec-title">소개</h2><span class="sec-meta">ABOUT</span></div>
     <div class="about">
-      <div class="pull">"광고비를 <i>태우는</i> 마케팅이 아니라, 매출과 브랜드 자산이 함께 쌓이는 마케팅을 만듭니다."</div>
+      <div class="pull">"AI를 <i>도구</i>로 쓰는 것이 아니라, AI와 <i>함께</i> 문제를 푸는 사람입니다."</div>
       <div class="body">
-        <p>안녕하세요, 퍼포먼스 마케터 이준경입니다. 저는 "왜 이 숫자가 나왔는가"를 끝까지 파고드는 마케터입니다. 캠페인 한 줄의 카피부터 ROAS 그래프의 변곡점까지, 성과의 이유를 데이터로 설명하는 일을 합니다.</p>
-        <p>대형 D2C 브랜드의 인하우스 마케팅, 시리즈A 스타트업의 그로스, B2B SaaS의 리드젠을 두루 경험하며 채널과 산업에 구애받지 않는 퍼널 설계 역량을 쌓았습니다.</p>
-        <p>지금은 프리랜서로서 여러 브랜드의 다음 단계 성장을 함께 만들고 있습니다. 숫자로 증명하고, 브랜드로 오래 남기는 것 — 그게 제가 일하는 방식입니다.</p>
+        <p>안녕하세요, AI 활용 담당 이준경입니다. 공개 데이터와 AI 도구를 결합해 현실의 문제를 해결하는 프로젝트를 만들고 있습니다.</p>
+        <p>청약 정보 대시보드, VOC 수집·분석 자동화, AI 정보 커뮤니티 등 직접 기획하고 배포한 서비스를 통해 데이터에서 인사이트를 뽑아내는 경험을 쌓아왔습니다.</p>
+        <p>기술을 위한 기술이 아닌, 사람들이 실제로 쓰는 결과물을 만드는 것을 목표로 합니다.</p>
       </div>
     </div>
   </div>
@@ -192,39 +181,44 @@
 
 <section id="work">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-no">02</span><h2 class="sec-title">주요 작업</h2><span class="sec-meta">SELECTED WORK</span></div>
-    <div class="feature">
-      <div>
-        <div class="fno">Featured</div>
-        <div class="fcat">D2C 뷰티 · 퍼포먼스 리빌딩</div>
-        <h3>뷰티 브랜드<br>광고 구조 재설계</h3>
-        <p>정체된 광고 계정을 전면 재구조화하고 크리에이티브 테스트 체계를 도입해, 6개월 만에 ROAS를 두 배 가까이 끌어올렸습니다.</p>
-        <div class="ftags"><span>Meta Ads</span><span>Google Ads</span><span>크리에이티브 A/B</span><span>GA4</span></div>
-      </div>
-      <div class="fbig"><div class="v">340%</div><div class="c">ROAS · 180%→340% / 6개월</div></div>
-    </div>
+    <div class="sec-head"><span class="sec-no">02</span><h2 class="sec-title">프로젝트</h2><span class="sec-meta">PROJECTS</span></div>
     <div class="plist">
       <div class="pcard">
+        <div class="pno">01</div>
+        <div class="pcat">공공데이터 · 부동산</div>
+        <h4>공개데이터 포털 활용<br>청약 대시보드</h4>
+        <p>공공데이터 포털 API를 활용해 청약 정보를 한눈에 볼 수 있도록 시각화한 대시보드. 복잡한 청약 데이터를 누구나 쉽게 탐색할 수 있도록 설계했습니다.</p>
+        <div class="pr">
+          <span class="link-label">준비 중</span>
+          <span class="badge">공공데이터 API</span>
+        </div>
+      </div>
+      <a href="https://mail-dashboard-fawn.vercel.app/" target="_blank" rel="noopener" class="pcard">
         <div class="pno">02</div>
-        <div class="pcat">헬스케어 앱 · 그로스</div>
-        <h4>앱 설치 그로스 &amp; CAC 최적화</h4>
-        <p>채널별 CAC를 분해하고 온보딩 퍼널을 개선해 설치 단가를 절반 가까이 낮추며 MAU를 3배로 키웠습니다.</p>
-        <div class="pr"><span class="v">−42%</span><span class="c">CAC · MAU ×3</span></div>
-      </div>
-      <div class="pcard">
+        <div class="pcat">VOC 분석 · 자동화</div>
+        <h4>GWS 캐스팅<br>VOC 수집 분석 대시보드</h4>
+        <p>고객 VOC 데이터를 자동으로 수집하고 분류·시각화하는 대시보드. 반복적인 분석 업무를 자동화해 실시간 인사이트를 제공합니다.</p>
+        <div class="pr">
+          <span class="link-label">
+            바로가기
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+          <span class="badge">Vercel 배포</span>
+        </div>
+      </a>
+      <a href="https://jungyung12q-alt.github.io/porttolio/" target="_blank" rel="noopener" class="pcard">
         <div class="pno">03</div>
-        <div class="pcat">라이프스타일 · 브랜드</div>
-        <h4>리브랜딩 런칭 캠페인</h4>
-        <p>리포지셔닝에 맞춘 통합 캠페인을 기획·운영해 인스타 팔로워 12만, 캠페인 도달 850만을 달성했습니다.</p>
-        <div class="pr"><span class="v">12만</span><span class="c">IG 팔로워</span></div>
-      </div>
-      <div class="pcard">
-        <div class="pno">04</div>
-        <div class="pcat">B2B SaaS · 리드젠</div>
-        <h4>리드젠 퍼널 설계 &amp; 운영</h4>
-        <p>콘텐츠–랜딩–세일즈 퍼널을 새로 설계하고 리드 스코어링을 도입해 MQL 3배, 영업 전환율 +27%p를 달성했습니다.</p>
-        <div class="pr"><span class="v">×3</span><span class="c">MQL 증가</span></div>
-      </div>
+        <div class="pcat">AI 정보 · 커뮤니티</div>
+        <h4>AI 정보 영상<br>커뮤니티</h4>
+        <p>AI 관련 영상과 정보를 큐레이션하는 커뮤니티 플랫폼. AI 트렌드를 쉽게 접할 수 있도록 콘텐츠를 정리하고 공유하는 공간입니다.</p>
+        <div class="pr">
+          <span class="link-label">
+            바로가기
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+          <span class="badge">GitHub Pages</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -233,12 +227,10 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-no">03</span><h2 class="sec-title">스킬 &amp; 도구</h2><span class="sec-meta">CAPABILITIES</span></div>
     <div class="skills">
-      <div class="srow"><h4>퍼포먼스 마케팅</h4><div class="chips"><span>Meta Ads</span><span>Google Ads</span><span>TikTok</span><span>카카오모먼트</span><span>네이버 GFA</span></div></div>
-      <div class="srow"><h4>데이터 분석</h4><div class="chips"><span>GA4</span><span>Amplitude</span><span>Looker Studio</span><span>SQL</span><span>GTM</span></div></div>
-      <div class="srow"><h4>콘텐츠 &amp; SNS</h4><div class="chips"><span>인스타그램</span><span>유튜브</span><span>숏폼 기획</span><span>카피라이팅</span></div></div>
-      <div class="srow"><h4>브랜드 전략</h4><div class="chips"><span>포지셔닝</span><span>메시지 설계</span><span>캠페인 기획</span><span>톤앤매너</span></div></div>
-      <div class="srow"><h4>CRM &amp; 리텐션</h4><div class="chips"><span>이메일 자동화</span><span>카카오 채널</span><span>앱 푸시</span><span>LTV 관리</span></div></div>
-      <div class="srow"><h4>그로스</h4><div class="chips"><span>A/B 테스트</span><span>퍼널 분석</span><span>코호트</span><span>실험 설계</span></div></div>
+      <div class="srow"><h4>AI 활용</h4><div class="chips"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>프롬프트 엔지니어링</span></div></div>
+      <div class="srow"><h4>데이터 분석</h4><div class="chips"><span>공공데이터 API</span><span>대시보드 설계</span><span>데이터 시각화</span></div></div>
+      <div class="srow"><h4>개발 · 배포</h4><div class="chips"><span>HTML/CSS</span><span>JavaScript</span><span>Vercel</span><span>GitHub Pages</span></div></div>
+      <div class="srow"><h4>자동화</h4><div class="chips"><span>VOC 수집</span><span>데이터 파이프라인</span><span>업무 자동화</span></div></div>
     </div>
   </div>
 </section>
@@ -246,17 +238,15 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact">
-      <div class="ck">LET'S WORK TOGETHER</div>
-      <h2>다음 캠페인,<br><i>함께</i> 만들어요.</h2>
+      <div class="ck">GET IN TOUCH</div>
+      <h2>함께 만들어갈<br><i>프로젝트</i>가 있나요?</h2>
       <div class="cinfo">
-        <a href="mailto:junkyung.lee@email.com" class="pill solid">junkyung.lee@email.com</a>
-        <a href="tel:01000000000" class="pill">010-0000-0000</a>
-        <a href="#" class="pill">LinkedIn</a>
+        <a href="mailto:wnsrud2006@naver.com" class="pill solid">wnsrud2006@naver.com</a>
       </div>
     </div>
     <footer>
       <span>© 2025 이준경</span>
-      <span>PORTFOLIO — MAGAZINE</span>
+      <span>AI UTILIZATION PORTFOLIO</span>
     </footer>
   </div>
 </section>
